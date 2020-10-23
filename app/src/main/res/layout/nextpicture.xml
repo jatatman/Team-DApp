@@ -45,16 +45,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="91dp"
-        android:layout_marginLeft="91dp"
-        android:layout_marginTop="127dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginRight="83dp"
-        android:layout_marginBottom="254dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="87dp"
+        android:layout_marginBottom="251dp"
         android:background="#000000"
         android:contentDescription="TODO"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/puppies"
+        app:srcCompat="@drawable/puppy"
         tools:srcCompat="@drawable/puppies" />
 
 </RelativeLayout>

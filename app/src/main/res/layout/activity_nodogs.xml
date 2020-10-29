@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#ffffff">
+    android:background="@drawable/running">
 
 
     <TextView
@@ -15,9 +15,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="137dp"
-        android:layout_marginRight="137dp"
-        android:layout_marginBottom="355dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:layout_marginBottom="271dp"
         android:text="No More dogs to love" />
 
     <Button
@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
-        android:layout_marginTop="-126dp"
+        android:layout_marginTop="-127dp"
         android:layout_marginEnd="18dp"
+        android:background="#C8CC0000"
         android:text="LogOut" />
 </RelativeLayout>

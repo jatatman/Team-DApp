@@ -5,7 +5,13 @@ Team DApp will create an application that will show the user pictures of differe
 
 By keeping track of the race of dogs that the user likes and tracking the characteristics of those types of dogs, The application will help the user to determine which dogs are from her/his preferences.
 
+## How To Use App
 
+First you need to download Android Studios.
+After downloading you can then bring the folder from the demo to the application.
+Open file.
+You then have to pick which android device you will be using. We are using a Pixel 2 API 30.
+Then click run and you should see the app come up on your phone.
 
 ### Related Links
 1 Burndown Chart Link

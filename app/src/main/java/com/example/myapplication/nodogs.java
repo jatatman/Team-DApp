@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class nodogs extends AppCompatActivity {
     Button btnLogout;
+    Button display;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
@@ -19,12 +20,21 @@ public class nodogs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nodogs);
         btnLogout = findViewById(R.id.logout);
+        display = findViewById(R.id.bb);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intToMain = new Intent(nodogs.this,LogInscreen.class);
+                startActivity(intToMain);
+            }
+        });
+
+        display.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intToMain = new Intent(nodogs.this,displayactivity.class);
                 startActivity(intToMain);
             }
         });

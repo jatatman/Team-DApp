@@ -10,14 +10,23 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
     final int[] images = {R.drawable.puppies, R.drawable.puppy, R.drawable.puppy2, R.drawable.puppy3, R.drawable.puppy4, R.drawable.puppy5};
     Random rand = new Random();
-    public int index = rand.nextInt(6);
+    public int index = rand.nextInt(images.length);
     public int count = 0;
+    public ArrayList<Integer> indexs = new ArrayList<Integer>();
+    public Set<Integer> hset = new HashSet<Integer>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +41,11 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Log.i("MYapp", "This is log message");
-                    // openNoDogs();
                     if(count < images.length)
                     {
                         dog.setImageResource(images[count]);
-                        index = rand.nextInt(6);
                         count++;
+                        index = nextIndex();
                     }
                     else
                     {
@@ -55,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                   if(count < images.length)
                   {
                       dog.setImageResource(images[count]);
-                      index = rand.nextInt(6);
                       count++;
+                      index = nextIndex();
                   }
                   else
                   {
@@ -71,9 +79,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void nextPicture()
+    public int nextIndex()
     {
-        Intent intent = new Intent(this, nextPicture.class);
-        startActivity(intent);
+        hset.add(index);
+        while(hset.contains(index))
+        {
+            index = rand.nextInt(images.length);
+        }
+        return index;
     }
+
 }
